@@ -1,9 +1,4 @@
-@font-face {
-  font-family: "Montserrat";
-  src: url("../public/fonts/Montserrat-Thin.woff2") format("woff2");
-  font-style: normal;
-  font-display: swap;
-}
+
 /**
   Нормализация блочной модели
  */
@@ -126,19 +121,10 @@ body, html {
 
 
 
-
+li{
+  list-style: none;
+}
 a{
   text-decoration: none;
-  color:inherit;
-}
-*{
-  color:var(--color-text);
-  font-family: Arial, Helvetica, sans-serif;
-}
-input:focus{
-  outline: none;
-}
-main{
-  min-height:  80vh;
-
+  color: inherit;
 }

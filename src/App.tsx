@@ -1,26 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Routes,Route } from "react-router-dom";
+import './styles/App.css';
+import Aside from "./components/Aside";
+import Calendar from "./components/Calendar";
+import AllTasks from "./components/AllTasks";
+import Today from "./components/Today";
+import "./styles/normalize.css"
+import "./styles/variables.css"
+import ModelWindowAddTask from "./components/ModelWindowAddTask";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const [isOpen, setIsOpen] = React.useState(false);
+
+    return (
+        <div className="App">
+            <Aside/>
+            { isOpen && <ModelWindowAddTask setIsOpen={setIsOpen}/> }
+            <Routes>
+                <Route path="/calendar" element={<Calendar />} />
+                <Route path="/all" element={<AllTasks/>} />
+                <Route path="*" element={<Today />} />
+            </Routes>
+        </div>
+    );
 }
 
 export default App;
