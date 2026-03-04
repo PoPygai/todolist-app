@@ -1,0 +1,71 @@
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+    clip-path: inset(100%) !important;
+    clip: rect(0 0 0 0) !important;
+    overflow: hidden !important;
+}
+
+:root {
+    line-height: 1.5;
+    font-weight: 400;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+
+    /*==========================================================*/
+    --bg-color: #FF6600;
+    --alternate-bg-color: #ff5900;
+    --color-text: white;
+    --color-text-black: black;
+    --color-text-gray: #abaeb5;
+    --border-radius:20px;
+}
+
+
+
+.btn{
+    border:  none;
+    padding: 15px 20px;
+    border-radius: 20px;
+    background: var(--alternate-bg-color);
+    color : var(--color-text-gray);
+}
+
+
+.btn:hover{
+    cursor: pointer;
+    color : var(--color-text);
+}
+
+.title-medium{
+    color: var(--color-text-black);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.input-big{
+    width: clamp(240px,40.04vw,600px);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-text-gray);
+    padding-left: 10px;
+
+    height: clamp(48px,4vw,80px);
+}
+.input-small{
+    /*todo*/
+    width: clamp(200px,15.62vw,300px);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-text-gray);
+    padding-left: 10px;
+
+    height: clamp(48px,4vw,80px);
+}
