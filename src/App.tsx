@@ -15,8 +15,8 @@ function App() {
 
     return (
         <div className="App">
-            <Aside/>
-            { isOpen && <ModelWindowAddTask setIsOpen={setIsOpen}/> }
+            <Aside setIsOpen={setIsOpen} />
+            { isOpen && <ModelWindowAddTask  setIsOpen={setIsOpen}/> }
             <Routes>
                 <Route path="/calendar" element={<Calendar />} />
                 <Route path="/all" element={<AllTasks/>} />

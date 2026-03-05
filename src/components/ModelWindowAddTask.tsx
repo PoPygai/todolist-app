@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 
 type Props = {
     setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
@@ -6,10 +6,26 @@ type Props = {
 
 
 const ModelWindowAddTask:React.FC<Props> = ({setIsOpen}) => {
+    const refModelWindow = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+
+        const handleClickOutside = (e: MouseEvent) => {
+            if (refModelWindow.current && !refModelWindow.current.contains(e.target as Node)) {
+                setIsOpen(false);
+            }
+        };
+
+        document.addEventListener("click", handleClickOutside);
+
+        return () => document.removeEventListener("click", handleClickOutside);
+    }, []);
 
 
     return (
-        <div className="model-window">
+        <div ref={refModelWindow}
+             onClick={(e) => e.stopPropagation()}
+             className="model-window">
             <form action="#">
             {/*
             input  -   title

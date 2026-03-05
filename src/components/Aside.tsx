@@ -3,19 +3,25 @@ import {btnsAside} from "../utils/constans";
 import "./Aside.css"
 import { Link } from "react-router-dom"
 
-const Aside = () => {
+type Props = {
+    setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+
+const Aside:React.FC<Props> = ({setIsOpen}) => {
 
     // todo  make class for active btn
     // todo  when it call we need get where this task will (in today or all)
-    const handleClick = () => {
-
+    const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+        e.stopPropagation();
+        setIsOpen(true);
     }
 
     return (
         <aside className="aside">
             <nav className="aside-nav">
 
-                <button className="aside-nav-btn" onClick={handleClick} type="button">
+                <button className="aside-nav-btn" onClick={(e)=>handleClick(e)} type="button">
                     <img className="aside-nav-btn__img" src="" alt="icon"/>
                     Add Task
                 </button>
