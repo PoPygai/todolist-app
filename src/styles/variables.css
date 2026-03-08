@@ -29,4 +29,60 @@
 }
 
 
+.small-title{
+    color: var(--text-red);
+    font-weight: bold;
+    font-size: 18px;
+}
+.title-topic{
+    color: var(--text-red);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
+
+
+
+.title-topic::before{
+    content: "";
+    width: 25%;
+}
+.title-topic::after{
+    content: "";
+    flex : 1;
+}
+.title-topic::before,
+.title-topic::after{
+    content: "";
+    height: 2px;
+    background: var(--gray);
+}
+
+
+
+
+/*================list=============*/
+
+.list-item{
+    background-color: white;
+    /*border: 1px solid var(--gray);*/
+    border-radius: var(--border-radius);
+    width: 100%;
+}
+
+.list-item:hover,.list-btn:hover{
+    background-color: var( --gray);
+}
+.list-item:not(:last-child){
+    margin-bottom: 10px;
+}
+.list-link{
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.list-img{
+}

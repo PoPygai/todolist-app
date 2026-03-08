@@ -1,0 +1,8 @@
+.creator{
+
+}
+
+.creator .title-topic::before,.title-topic::after{
+    content: "";
+    flex: 1;
+}

@@ -8,6 +8,7 @@ import Today from "./components/Today";
 import "./styles/normalize.css"
 import "./styles/variables.css"
 import ModelWindowAddTask from "./components/ModelWindowAddTask";
+import Creator from "./components/Creator";
 
 function App() {
 
@@ -17,11 +18,14 @@ function App() {
         <div className="App">
             <Aside setIsOpen={setIsOpen} />
             { isOpen && <ModelWindowAddTask  setIsOpen={setIsOpen}/> }
-            <Routes>
-                <Route path="/calendar" element={<Calendar />} />
-                <Route path="/all" element={<AllTasks/>} />
-                <Route path="*" element={<Today />} />
-            </Routes>
+            <main>
+                <Routes>
+                    <Route path="/calendar" element={<Calendar />} />
+                    <Route path="/all" element={<AllTasks/>} />
+                    <Route path="/create-password" element={<Creator/>} />
+                    <Route path="*" element={<Today />} />
+                </Routes>
+            </main>
         </div>
     );
 }

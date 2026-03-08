@@ -1,5 +1,5 @@
 import React from 'react';
-import {btnsAside} from "../utils/constans";
+import {toodListBtnsAside, toolsBtnsAside} from "../utils/constans";
 import "./Aside.css"
 import { Link } from "react-router-dom"
 
@@ -20,28 +20,53 @@ const Aside:React.FC<Props> = ({setIsOpen}) => {
     return (
         <aside className="aside">
             <nav className="aside-nav">
+                <h4 className="aside-nav-todolist__title title-topic small-title">To-Do-List</h4>
 
-                <button className="aside-nav-btn" onClick={(e)=>handleClick(e)} type="button">
+                <button className="aside-nav-btn small-title"  onClick={(e)=>handleClick(e)} type="button">
                     <img className="aside-nav-btn__img" src="" alt="icon"/>
                     Add Task
                 </button>
 
-                <ul className="aside-nav__list">
+                <ul className="aside-nav-todolist list">
                     {
-                        btnsAside.map((item) =>
-                            <li className="aside-nav__item" key={item.location}>
+                        toodListBtnsAside.map((item) =>
+                            <li className="aside-nav-todolist__item list-item" key={item.location}>
                                 <Link
-                                    className="aside-nav__link"
+                                    className="aside-nav-todolist__link list-link"
                                     to={`/${item.location}`}
                                 >
-                                    <img className="aside-nav__img" src="" alt="icon" />
+                                    <img className="aside-nav-todolist__img list-img" src="" alt="icon" />
                                     {item.title}
-                                    <p className="aside-nav__count">0</p>
+                                    <p className="aside-nav-todolist__count list-count">0</p>
                                 </Link>
                             </li>
                         )
                     }
                 </ul>
+
+
+                <section className="aside-nav-tools">
+                    <h4 className="aside-nav-tools__title title-topic small-title">Tools</h4>
+
+
+                    <ul className="aside-nav-tools__title list">
+                        {
+                            toolsBtnsAside.map((item) =>
+                                <li className="aside-nav-tools__item list-item" key={item.location}>
+                                    <Link
+                                        className="aside-nav-tools__link list-link"
+                                        to={`/${item.location}`}
+                                    >
+                                        <img className="aside-nav-tools__img list-img" src="" alt="icon" />
+                                        {item.title}
+                                        <p className="avoid"></p>
+                                    </Link>
+                                </li>
+                            )
+                        }
+                    </ul>
+                </section>
+
             </nav>
 
         </aside>

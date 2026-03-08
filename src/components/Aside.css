@@ -3,24 +3,10 @@
 }
 
 
-.aside-nav__item{
-    background-color: white;
-    /*border: 1px solid var(--gray);*/
-    border-radius: var(--border-radius);
-    width: 100%;
-}
 
-.aside-nav__item:hover,.aside-nav-btn:hover{
-    background-color: var( --gray);
-}
-.aside-nav__item:not(:last-child){
-    margin-bottom: 10px;
-}
-.aside-nav__link{
-    padding: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+
+.aside-nav-btn__img {
+    margin-right: 15px;
 }
 .aside-nav-btn{
     background-color: white;
@@ -31,10 +17,20 @@
     align-items: center;
     margin-bottom: 25px;
     border-radius: var(--border-radius);
-    color: var(--text-red);
-    font-weight: bold;
-    font-size: 18px;
 }
-.aside-nav-btn__img{
-    margin-right: 15px;
+
+.aside-nav-todolist,.aside-nav-todolist__title{
+    margin-bottom: 50px;
+}
+
+
+/*=====================================TOOLS=============================*/
+.aside-nav-tools__title{
+    margin-bottom: 30px;
+}
+.aside-nav-tools__img{
+    /*margin-right: 15px;*/
+}
+.aside-nav-tools__link {
+
 }

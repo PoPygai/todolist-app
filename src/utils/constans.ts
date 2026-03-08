@@ -1,6 +1,6 @@
 import {BtnsAside} from "./types";
 
-export const btnsAside:BtnsAside[] = [
+export const toodListBtnsAside:BtnsAside[] = [
     {
         location:"",
         title:"Today",
@@ -12,5 +12,12 @@ export const btnsAside:BtnsAside[] = [
     {
         location:"all",
         title:"All Tasks",
+    },
+]
+
+export const toolsBtnsAside:BtnsAside[] = [
+    {
+        location:"create-password",
+        title:"Create Password",
     },
 ]
