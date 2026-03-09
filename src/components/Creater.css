@@ -1,8 +1,30 @@
 .creator{
 
 }
-
+.creator-section{
+    padding-block: 20px;
+}
 .creator .title-topic::before,.title-topic::after{
     content: "";
     flex: 1;
+}
+.creator-info__form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.creator-info__label:nth-child(odd){
+    display: flex;
+    justify-content: space-between;
+    align-items: self-start;
+}
+.creator-info__inp{
+    width: 150px;
+}
+.creator-password__main{
+    padding-inline: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    column-gap: 10px;
 }

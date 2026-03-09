@@ -21,3 +21,10 @@ export const toolsBtnsAside:BtnsAside[] = [
         title:"Create Password",
     },
 ]
+
+
+
+export const MAX_VALUE_LENGTH  = 36;
+export const MIN_VALUE_LENGTH  = 0;
+export const MAX_VALUE_SYMBOLS  = 10;
+export const MIN_VALUE_SYMBOLS  = 0;
